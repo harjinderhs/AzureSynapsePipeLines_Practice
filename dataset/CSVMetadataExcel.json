@@ -1,0 +1,36 @@
+{
+	"name": "CSVMetadataExcel",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "wsp-ncpl-hsingh-WorkspaceDefaultStorage",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Excel",
+		"typeProperties": {
+			"sheetName": "Sheet1",
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "metadata.xlsx",
+				"folderPath": "AdidasWebStoreData/metadata",
+				"fileSystem": "synapsepracticecontainer"
+			},
+			"firstRowAsHeader": true
+		},
+		"schema": [
+			{
+				"name": "s_no",
+				"type": "String"
+			},
+			{
+				"name": "file_name",
+				"type": "String"
+			},
+			{
+				"name": "table_name",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.Synapse/workspaces/datasets"
+}

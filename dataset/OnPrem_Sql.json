@@ -1,0 +1,17 @@
+{
+	"name": "OnPrem_Sql",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "OnPrem_SQLServer",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "PersonDemo"
+		}
+	},
+	"type": "Microsoft.Synapse/workspaces/datasets"
+}
