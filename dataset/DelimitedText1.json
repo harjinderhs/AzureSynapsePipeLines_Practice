@@ -10,8 +10,8 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "currency.csv",
-				"fileSystem": "practicecontainer"
+				"folderPath": "MyDBData/ProductInfoFiles",
+				"fileSystem": "synapsepracticecontainer"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",

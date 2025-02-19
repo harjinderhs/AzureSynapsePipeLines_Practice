@@ -20,7 +20,8 @@
 						"storeSettings": {
 							"type": "AzureBlobFSReadSettings",
 							"recursive": true,
-							"wildcardFileName": "currency*",
+							"wildcardFolderPath": "MyDBData/ProductInfoFiles",
+							"wildcardFileName": "Sales*",
 							"enablePartitionDiscovery": false
 						},
 						"formatSettings": {
@@ -30,8 +31,7 @@
 					"sink": {
 						"type": "AvroSink",
 						"storeSettings": {
-							"type": "AzureBlobStorageWriteSettings",
-							"copyBehavior": "MergeFiles"
+							"type": "AzureBlobStorageWriteSettings"
 						},
 						"formatSettings": {
 							"type": "AvroWriteSettings"
@@ -49,11 +49,8 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "DS_ADLSCsv",
-						"type": "DatasetReference",
-						"parameters": {
-							"FolderName": "Checkkile"
-						}
+						"referenceName": "DelimitedText1",
+						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
