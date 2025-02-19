@@ -23,9 +23,6 @@
 		"wsp-ncpl-hsingh-WorkspaceDefaultStorage_properties_typeProperties_url": {
 			"value": "https://adlsgen2singh.dfs.core.windows.net"
 		},
-		"TriggerStorcageEventCheck_properties_typeProperties_scope": {
-			"value": "/subscriptions/7e0e5602-430d-4971-b3be-8f61851a8f34/resourceGroups/ncplrg-harjinder/providers/Microsoft.Storage/storageAccounts/adlsgen2singh"
-		},
 		"storageevent_properties_typeProperties_scope": {
 			"value": "/subscriptions/7e0e5602-430d-4971-b3be-8f61851a8f34/resourceGroups/ncplrg-harjinder/providers/Microsoft.Storage/storageAccounts/adlsgen2singh"
 		}

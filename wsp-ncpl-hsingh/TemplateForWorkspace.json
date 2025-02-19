@@ -32,10 +32,6 @@
 			"type": "string",
 			"defaultValue": "https://adlsgen2singh.dfs.core.windows.net"
 		},
-		"TriggerStorcageEventCheck_properties_typeProperties_scope": {
-			"type": "string",
-			"defaultValue": "/subscriptions/7e0e5602-430d-4971-b3be-8f61851a8f34/resourceGroups/ncplrg-harjinder/providers/Microsoft.Storage/storageAccounts/adlsgen2singh"
-		},
 		"storageevent_properties_typeProperties_scope": {
 			"type": "string",
 			"defaultValue": "/subscriptions/7e0e5602-430d-4971-b3be-8f61851a8f34/resourceGroups/ncplrg-harjinder/providers/Microsoft.Storage/storageAccounts/adlsgen2singh"
@@ -1180,36 +1176,6 @@
 			},
 			"dependsOn": [
 				"[concat(variables('workspaceId'), '/integrationRuntimes/AutoResolveIntegrationRuntime')]"
-			]
-		},
-		{
-			"name": "[concat(parameters('workspaceName'), '/TriggerStorcageEventCheck')]",
-			"type": "Microsoft.Synapse/workspaces/triggers",
-			"apiVersion": "2019-06-01-preview",
-			"properties": {
-				"annotations": [],
-				"runtimeState": "Stopped",
-				"pipelines": [
-					{
-						"pipelineReference": {
-							"referenceName": "TriggerCheck",
-							"type": "PipelineReference"
-						},
-						"parameters": {}
-					}
-				],
-				"type": "BlobEventsTrigger",
-				"typeProperties": {
-					"blobPathBeginsWith": "/synapsepracticecontainer/blobs/",
-					"ignoreEmptyBlobs": false,
-					"scope": "[parameters('TriggerStorcageEventCheck_properties_typeProperties_scope')]",
-					"events": [
-						"Microsoft.Storage.BlobDeleted"
-					]
-				}
-			},
-			"dependsOn": [
-				"[concat(variables('workspaceId'), '/pipelines/TriggerCheck')]"
 			]
 		},
 		{
