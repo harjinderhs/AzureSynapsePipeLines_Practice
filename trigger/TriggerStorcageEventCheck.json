@@ -17,7 +17,6 @@
 			"ignoreEmptyBlobs": true,
 			"scope": "/subscriptions/7e0e5602-430d-4971-b3be-8f61851a8f34/resourceGroups/ncplrg-harjinder/providers/Microsoft.Storage/storageAccounts/adlsgen2singh",
 			"events": [
-				"Microsoft.Storage.BlobCreated",
 				"Microsoft.Storage.BlobDeleted"
 			]
 		}
